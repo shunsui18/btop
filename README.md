@@ -4,7 +4,7 @@
 
 # 夜桜 Yozakura — btop Theme
 
-A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/btop), based on the [Yozakura](https://shunsui18.github.io/yozakura) palette.
+A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/btop), based on the [Yozakura](https://github.com/shunsui18/yozakura) palette.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-pink?style=flat-square)](LICENSE)
 [![btop](https://img.shields.io/badge/btop++-1.4.6+-lavender?style=flat-square)](https://github.com/aristocratos/btop)
@@ -39,64 +39,79 @@ A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/
 
 ## ✦ Installation
 
-### One-liner
+### Interactive — One-liner
 
-Install directly from this repository with a single command:
+Run without any arguments to launch the guided menu:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/btop/main/install.sh)
 ```
 
-> This runs with **Yoru** flavor and `theme_background = true` by default.
+The installer will walk you through picking a flavor and background setting:
+
+```
+  夜桜 Yozakura — btop Theme Installer
+  ──────────────────────────────────────
+
+  Select a flavor:
+  1) 🌸  Yoru  (night — deep moonlit background)
+  2) ☀️   Hiru  (day  — warm ivory canvas)
+
+  Flavor [1/2] (default: 1): _
+
+  Use theme background?
+  1) Yes  (theme_background = true)
+  2) No   (theme_background = false — use terminal transparency)
+
+  Background [1/2] (default: 1): _
+```
 
 ---
 
-### Options
+### Non-interactive — Flags
 
-| Flag | Values | Default | Description |
-|---|---|---|---|
-| `--theme` | `yoru` \| `hiru` | `yoru` | Which flavor to activate |
-| `--bg` | `true` \| `false` | `true` | Set `theme_background` in btop.conf |
-| `-h`, `--help` | — | — | Show help |
-
----
-
-### Examples
+Skip the menu entirely by passing flags directly:
 
 ```bash
-# Yoru (night) — background on
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/btop/main/install.sh) --theme yoru --bg true
-
-# Hiru (day) — no background (use terminal transparency)
 bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/btop/main/install.sh) --theme hiru --bg false
 ```
+
+| Flag | Values | Description |
+|---|---|---|
+| `--theme` | `yoru` \| `hiru` | Theme flavor to activate |
+| `--bg` | `true` \| `false` | Set `theme_background` in btop.conf |
+| `-h`, `--help` | — | Show help |
 
 ---
 
 ### Manual Installation
 
-If you prefer to install by hand:
+If you prefer to clone and run locally:
 
 ```bash
 # 1. Clone the repo
 git clone https://github.com/shunsui18/btop.git && cd btop
 
-# 2. Run the installer
-./install.sh --theme yoru --bg true
+# 2a. Interactive
+./install.sh
+
+# 2b. Or with flags
+./install.sh --theme hiru --bg false
 ```
 
 ---
 
 ## ✦ What the Installer Does
 
-1. **Self-locates** — resolves its own path regardless of where it is called from or whether it is symlinked
-2. **Validates** — confirms the requested theme file exists before touching anything
-3. **Copies** all `yozakura-*.theme` files into `$HOME/.config/btop/themes/`, creating the directory if needed
-4. **Patches** `$HOME/.config/btop/btop.conf`:
+1. **Menu or flags** — launches an interactive prompt if no arguments are given, or skips straight to install when flags are provided
+2. **Self-locates** — resolves its own path regardless of where it is called from or whether it is symlinked
+3. **Validates** — confirms the requested theme file exists before touching anything
+4. **Copies** all `yozakura-*.theme` files into `$HOME/.config/btop/themes/`, creating the directory if needed
+5. **Patches** `$HOME/.config/btop/btop.conf`:
    - Sets `color_theme` to the full absolute path btop expects
    - Sets `theme_background` to your chosen value
    - Appends either key if it is missing from the config entirely
-5. **Fails gracefully** — descriptive `[error]` messages if the config is missing, arguments are wrong, or a theme file is not found
+6. **Fails gracefully** — descriptive error messages if the config is missing, arguments are invalid, or a theme file is not found
 
 > **Note:** btop must have been launched at least once so that `btop.conf` exists before running the installer.
 
