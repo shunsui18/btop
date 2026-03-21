@@ -22,6 +22,19 @@ A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/
 | 🌸 | **Yoru** *(night)* | Deep, moonlit background with soft sakura accents — default |
 | ☀️ | **Hiru** *(day)* | Warm ivory canvas with gentle pastel tones |
 
+<br>
+
+<table>
+<tr>
+<td align="center"><b>🌸 Yoru</b></td>
+<td align="center"><b>☀️ Hiru</b></td>
+</tr>
+<tr>
+<td><img src="assets/yozakura-yoru-btop-preview.png" alt="Yozakura Yoru preview"/></td>
+<td><img src="assets/yozakura-hiru-btop-preview.png" alt="Yozakura Hiru preview"/></td>
+</tr>
+</table>
+
 ---
 
 ## ✦ Installation
@@ -93,10 +106,14 @@ git clone https://github.com/shunsui18/btop.git && cd btop
 
 ```
 btop/
+├── assets/
+│   ├── yozakura-yoru-btop-preview.png
+│   └── yozakura-hiru-btop-preview.png
 ├── themes/
 │   ├── yozakura-yoru.theme
 │   └── yozakura-hiru.theme
 ├── install.sh
+├── LICENSE
 └── README.md
 ```
 
