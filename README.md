@@ -4,7 +4,7 @@
 
 # 夜桜 Yozakura — btop Theme
 
-A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/btop), based on the [Yozakura](https://github.com/shunsui18/yozakura) palette.
+A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/btop), based on the [Yozakura](https://shunsui18.github.io/yozakura) palette.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-pink?style=flat-square)](LICENSE)
 [![btop](https://img.shields.io/badge/btop++-1.4.6+-lavender?style=flat-square)](https://github.com/aristocratos/btop)
