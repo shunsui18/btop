@@ -44,7 +44,7 @@ A handcrafted pastel color palette for [btop++](https://github.com/aristocratos/
 Run without any arguments to launch the guided menu:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/btop/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-btop/main/install.sh)
 ```
 
 The installer will walk you through picking a flavor and background setting:
@@ -73,7 +73,7 @@ The installer will walk you through picking a flavor and background setting:
 Skip the menu entirely by passing flags directly:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/btop/main/install.sh) --theme hiru --bg false
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-btop/main/install.sh) --theme hiru --bg false
 ```
 
 | Flag | Values | Description |
@@ -90,7 +90,7 @@ If you prefer to clone and run locally:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/shunsui18/btop.git && cd btop
+git clone https://github.com/shunsui18/yozakura-btop.git && cd yozakura-btop
 
 # 2a. Interactive
 ./install.sh
@@ -120,7 +120,7 @@ git clone https://github.com/shunsui18/btop.git && cd btop
 ## ✦ File Structure
 
 ```
-btop/
+yozakura-btop/
 ├── assets/
 │   ├── yozakura-yoru-btop-preview.png
 │   └── yozakura-hiru-btop-preview.png
